@@ -94,9 +94,9 @@
             // 
             // btn_evolustur
             // 
-            btn_evolustur.Location = new Point(12, 555);
+            btn_evolustur.Location = new Point(12, 552);
             btn_evolustur.Name = "btn_evolustur";
-            btn_evolustur.Size = new Size(196, 45);
+            btn_evolustur.Size = new Size(250, 50);
             btn_evolustur.TabIndex = 1;
             btn_evolustur.Text = "Ev Oluştur";
             btn_evolustur.UseVisualStyleBackColor = true;
@@ -104,6 +104,7 @@
             // 
             // groupb_ogrencibilgileri
             // 
+            groupb_ogrencibilgileri.BackColor = SystemColors.ActiveCaption;
             groupb_ogrencibilgileri.Controls.Add(label_sinavortalama);
             groupb_ogrencibilgileri.Controls.Add(tbox_sinav3);
             groupb_ogrencibilgileri.Controls.Add(tbox_ders);
@@ -117,7 +118,7 @@
             groupb_ogrencibilgileri.Controls.Add(label_sinav3);
             groupb_ogrencibilgileri.Controls.Add(label_ogrendisoyad);
             groupb_ogrencibilgileri.Controls.Add(label_ogrenciders);
-            groupb_ogrencibilgileri.Location = new Point(232, 12);
+            groupb_ogrencibilgileri.Location = new Point(251, 21);
             groupb_ogrencibilgileri.Name = "groupb_ogrencibilgileri";
             groupb_ogrencibilgileri.Size = new Size(605, 202);
             groupb_ogrencibilgileri.TabIndex = 2;
@@ -127,10 +128,10 @@
             // label_sinavortalama
             // 
             label_sinavortalama.AutoSize = true;
-            label_sinavortalama.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label_sinavortalama.Location = new Point(283, 154);
+            label_sinavortalama.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label_sinavortalama.Location = new Point(372, 165);
             label_sinavortalama.Name = "label_sinavortalama";
-            label_sinavortalama.Size = new Size(169, 30);
+            label_sinavortalama.Size = new Size(151, 25);
             label_sinavortalama.TabIndex = 2;
             label_sinavortalama.Text = "Not Ortalaması:";
             // 
@@ -241,9 +242,9 @@
             // 
             // btn_ogrenciolustur
             // 
-            btn_ogrenciolustur.Location = new Point(609, 552);
+            btn_ogrenciolustur.Location = new Point(606, 552);
             btn_ogrenciolustur.Name = "btn_ogrenciolustur";
-            btn_ogrenciolustur.Size = new Size(247, 50);
+            btn_ogrenciolustur.Size = new Size(250, 50);
             btn_ogrenciolustur.TabIndex = 1;
             btn_ogrenciolustur.Text = "Öğrenci Oluştur";
             btn_ogrenciolustur.UseVisualStyleBackColor = true;
@@ -254,9 +255,9 @@
             listbox_ogrenci.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
             listbox_ogrenci.FormattingEnabled = true;
             listbox_ogrenci.ItemHeight = 30;
-            listbox_ogrenci.Location = new Point(261, 243);
+            listbox_ogrenci.Location = new Point(251, 243);
             listbox_ogrenci.Name = "listbox_ogrenci";
-            listbox_ogrenci.Size = new Size(584, 274);
+            listbox_ogrenci.Size = new Size(594, 274);
             listbox_ogrenci.TabIndex = 3;
             // 
             // Form1
