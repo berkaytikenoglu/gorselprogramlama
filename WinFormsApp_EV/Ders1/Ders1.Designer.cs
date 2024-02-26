@@ -273,7 +273,8 @@
             Controls.Add(label_kat);
             Controls.Add(label_renk);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Görsel Programlama Ders 1";
             groupb_ogrencibilgileri.ResumeLayout(false);
             groupb_ogrencibilgileri.PerformLayout();
             ResumeLayout(false);

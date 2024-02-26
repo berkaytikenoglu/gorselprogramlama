@@ -1,4 +1,4 @@
-using WinFormsApp_EV.Models;
+using GorselProgramlama.Ders1.Models;
 
 namespace WinFormsApp_EV
 {
@@ -7,8 +7,6 @@ namespace WinFormsApp_EV
         public Form1()
         {
             InitializeComponent();
-
-            //tbox_sinav1.KeyPress += tbox_sinav1;
         }
 
         private void btn_evolustur_Click(object sender, EventArgs e)
