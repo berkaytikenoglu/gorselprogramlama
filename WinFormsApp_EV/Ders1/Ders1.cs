@@ -68,5 +68,40 @@ namespace WinFormsApp_EV
                 e.Handled = true;
             }
         }
+
+        private void btn_kusekle_Click(object sender, EventArgs e)
+        {
+
+
+            if (tbox_kustur.Text == "" || tbox_kusayak.Text == "" || tbox_kusrenk.Text == "" || tbox_kusisim.Text == "")
+            {
+                MessageBox.Show("Eksik parametreler var!");
+                return;
+            }
+
+
+            Kuslar kus = new Kuslar();
+            kus.Tur = tbox_kustur.Text;
+            kus.Ayak = tbox_kusayak.Text;
+
+            //Papaðan kalýtým yolu ile kuþlardan türetildi.
+            Papagan papagan  = new Papagan();
+
+
+
+            papagan.Renk = tbox_kusrenk.Text;
+            papagan.Isim = tbox_kusisim.Text;
+
+            listbox_kuslar.Items.Clear();
+
+            listbox_kuslar.Items.Add("***KUÞLAR ***");
+
+            listbox_kuslar.Items.Add("Tür: " + kus.Tur);
+            listbox_kuslar.Items.Add("Ses: " + papagan.sescikar());
+            listbox_kuslar.Items.Add("Ayak: " + kus.Ayak);
+            listbox_kuslar.Items.Add("Renk: " + papagan.Renk);
+            listbox_kuslar.Items.Add("Ýsim: " + papagan.Isim);
+
+        }
     }
 }

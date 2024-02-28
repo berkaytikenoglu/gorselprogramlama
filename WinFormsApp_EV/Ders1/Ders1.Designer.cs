@@ -36,6 +36,7 @@
             groupb_ogrencibilgileri = new GroupBox();
             label_sinavortalama = new Label();
             tbox_sinav3 = new TextBox();
+            btn_ogrenciolustur = new Button();
             tbox_ders = new TextBox();
             tbox_sinav1 = new TextBox();
             tbox_ogrenciadi = new TextBox();
@@ -47,9 +48,22 @@
             label_sinav3 = new Label();
             label_ogrendisoyad = new Label();
             label_ogrenciders = new Label();
-            btn_ogrenciolustur = new Button();
             listbox_ogrenci = new ListBox();
+            groupBox1 = new GroupBox();
+            btn_kusekle = new Button();
+            tbox_kusisim = new TextBox();
+            tbox_kusses = new TextBox();
+            tbox_kusrenk = new TextBox();
+            tbox_kustur = new TextBox();
+            tbox_kusayak = new TextBox();
+            label_kusrenk = new Label();
+            label4 = new Label();
+            label_kusisim = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            listbox_kuslar = new ListBox();
             groupb_ogrencibilgileri.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label_renk
@@ -94,9 +108,9 @@
             // 
             // btn_evolustur
             // 
-            btn_evolustur.Location = new Point(12, 552);
+            btn_evolustur.Location = new Point(27, 234);
             btn_evolustur.Name = "btn_evolustur";
-            btn_evolustur.Size = new Size(250, 50);
+            btn_evolustur.Size = new Size(207, 45);
             btn_evolustur.TabIndex = 1;
             btn_evolustur.Text = "Ev Oluştur";
             btn_evolustur.UseVisualStyleBackColor = true;
@@ -107,6 +121,7 @@
             groupb_ogrencibilgileri.BackColor = SystemColors.ActiveCaption;
             groupb_ogrencibilgileri.Controls.Add(label_sinavortalama);
             groupb_ogrencibilgileri.Controls.Add(tbox_sinav3);
+            groupb_ogrencibilgileri.Controls.Add(btn_ogrenciolustur);
             groupb_ogrencibilgileri.Controls.Add(tbox_ders);
             groupb_ogrencibilgileri.Controls.Add(tbox_sinav1);
             groupb_ogrencibilgileri.Controls.Add(tbox_ogrenciadi);
@@ -142,6 +157,18 @@
             tbox_sinav3.Size = new Size(130, 23);
             tbox_sinav3.TabIndex = 6;
             tbox_sinav3.KeyPress += tbox_sinav1_KeyPress;
+            // 
+            // btn_ogrenciolustur
+            // 
+            btn_ogrenciolustur.BackColor = SystemColors.ActiveBorder;
+            btn_ogrenciolustur.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_ogrenciolustur.Location = new Point(68, 158);
+            btn_ogrenciolustur.Name = "btn_ogrenciolustur";
+            btn_ogrenciolustur.Size = new Size(252, 32);
+            btn_ogrenciolustur.TabIndex = 7;
+            btn_ogrenciolustur.Text = "KAYDET";
+            btn_ogrenciolustur.UseVisualStyleBackColor = false;
+            btn_ogrenciolustur.Click += btn_ogrenciolustur_Click;
             // 
             // tbox_ders
             // 
@@ -240,34 +267,153 @@
             label_ogrenciders.TabIndex = 0;
             label_ogrenciders.Text = "Ders";
             // 
-            // btn_ogrenciolustur
-            // 
-            btn_ogrenciolustur.Location = new Point(606, 552);
-            btn_ogrenciolustur.Name = "btn_ogrenciolustur";
-            btn_ogrenciolustur.Size = new Size(250, 50);
-            btn_ogrenciolustur.TabIndex = 1;
-            btn_ogrenciolustur.Text = "Öğrenci Oluştur";
-            btn_ogrenciolustur.UseVisualStyleBackColor = true;
-            btn_ogrenciolustur.Click += btn_ogrenciolustur_Click;
-            // 
             // listbox_ogrenci
             // 
-            listbox_ogrenci.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            listbox_ogrenci.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             listbox_ogrenci.FormattingEnabled = true;
-            listbox_ogrenci.ItemHeight = 30;
+            listbox_ogrenci.ItemHeight = 25;
             listbox_ogrenci.Location = new Point(251, 243);
             listbox_ogrenci.Name = "listbox_ogrenci";
-            listbox_ogrenci.Size = new Size(594, 274);
+            listbox_ogrenci.Size = new Size(605, 254);
             listbox_ogrenci.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = SystemColors.ActiveCaption;
+            groupBox1.Controls.Add(btn_kusekle);
+            groupBox1.Controls.Add(tbox_kusisim);
+            groupBox1.Controls.Add(tbox_kusses);
+            groupBox1.Controls.Add(tbox_kusrenk);
+            groupBox1.Controls.Add(tbox_kustur);
+            groupBox1.Controls.Add(tbox_kusayak);
+            groupBox1.Controls.Add(label_kusrenk);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label_kusisim);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Location = new Point(251, 513);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(605, 202);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Kuş Bilgileri";
+            // 
+            // btn_kusekle
+            // 
+            btn_kusekle.BackColor = SystemColors.ActiveBorder;
+            btn_kusekle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btn_kusekle.Location = new Point(68, 158);
+            btn_kusekle.Name = "btn_kusekle";
+            btn_kusekle.Size = new Size(252, 32);
+            btn_kusekle.TabIndex = 13;
+            btn_kusekle.Text = "KAYDET";
+            btn_kusekle.UseVisualStyleBackColor = false;
+            btn_kusekle.Click += btn_kusekle_Click;
+            // 
+            // tbox_kusisim
+            // 
+            tbox_kusisim.Location = new Point(423, 75);
+            tbox_kusisim.Name = "tbox_kusisim";
+            tbox_kusisim.Size = new Size(130, 23);
+            tbox_kusisim.TabIndex = 12;
+            // 
+            // tbox_kusses
+            // 
+            tbox_kusses.Location = new Point(154, 75);
+            tbox_kusses.Name = "tbox_kusses";
+            tbox_kusses.Size = new Size(130, 23);
+            tbox_kusses.TabIndex = 9;
+            // 
+            // tbox_kusrenk
+            // 
+            tbox_kusrenk.Location = new Point(423, 50);
+            tbox_kusrenk.Name = "tbox_kusrenk";
+            tbox_kusrenk.Size = new Size(130, 23);
+            tbox_kusrenk.TabIndex = 11;
+            // 
+            // tbox_kustur
+            // 
+            tbox_kustur.Location = new Point(154, 50);
+            tbox_kustur.Name = "tbox_kustur";
+            tbox_kustur.Size = new Size(130, 23);
+            tbox_kustur.TabIndex = 8;
+            // 
+            // tbox_kusayak
+            // 
+            tbox_kusayak.Location = new Point(154, 100);
+            tbox_kusayak.Name = "tbox_kusayak";
+            tbox_kusayak.Size = new Size(130, 23);
+            tbox_kusayak.TabIndex = 10;
+            // 
+            // label_kusrenk
+            // 
+            label_kusrenk.AutoSize = true;
+            label_kusrenk.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label_kusrenk.Location = new Point(328, 50);
+            label_kusrenk.Name = "label_kusrenk";
+            label_kusrenk.Size = new Size(57, 25);
+            label_kusrenk.TabIndex = 0;
+            label_kusrenk.Text = "Renk";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label4.Location = new Point(6, 50);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 25);
+            label4.TabIndex = 0;
+            label4.Text = "Tür";
+            // 
+            // label_kusisim
+            // 
+            label_kusisim.AutoSize = true;
+            label_kusisim.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label_kusisim.Location = new Point(328, 75);
+            label_kusisim.Name = "label_kusisim";
+            label_kusisim.Size = new Size(48, 25);
+            label_kusisim.TabIndex = 0;
+            label_kusisim.Text = "İsim";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label6.Location = new Point(4, 100);
+            label6.Name = "label6";
+            label6.Size = new Size(56, 25);
+            label6.TabIndex = 0;
+            label6.Text = "Ayak";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label7.Location = new Point(6, 75);
+            label7.Name = "label7";
+            label7.Size = new Size(41, 25);
+            label7.TabIndex = 0;
+            label7.Text = "Ses";
+            // 
+            // listbox_kuslar
+            // 
+            listbox_kuslar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            listbox_kuslar.FormattingEnabled = true;
+            listbox_kuslar.ItemHeight = 25;
+            listbox_kuslar.Location = new Point(251, 721);
+            listbox_kuslar.Name = "listbox_kuslar";
+            listbox_kuslar.Size = new Size(605, 254);
+            listbox_kuslar.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(868, 614);
+            ClientSize = new Size(1186, 1022);
+            Controls.Add(listbox_kuslar);
             Controls.Add(listbox_ogrenci);
+            Controls.Add(groupBox1);
             Controls.Add(groupb_ogrencibilgileri);
-            Controls.Add(btn_ogrenciolustur);
             Controls.Add(btn_evolustur);
             Controls.Add(label_yakit);
             Controls.Add(label_fiyat);
@@ -278,6 +424,8 @@
             Text = "Görsel Programlama Ders 1";
             groupb_ogrencibilgileri.ResumeLayout(false);
             groupb_ogrencibilgileri.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,5 +453,18 @@
         private Label label_sinav2;
         private Label label_sinav3;
         private Label label_sinavortalama;
+        private GroupBox groupBox1;
+        private Button btn_kusekle;
+        private TextBox tbox_kusses;
+        private TextBox tbox_kustur;
+        private TextBox tbox_kusayak;
+        private Label label4;
+        private Label label6;
+        private Label label7;
+        private ListBox listbox_kuslar;
+        private TextBox tbox_kusisim;
+        private TextBox tbox_kusrenk;
+        private Label label_kusrenk;
+        private Label label_kusisim;
     }
 }
